@@ -1,0 +1,74 @@
+body {
+  padding-top: 15%;
+}
+
+#txtaInput {
+  width: 97%;
+}
+
+#modalInputWC {
+  text-align: center;
+}
+
+#divCanvas {
+  height: 100px;
+  padding-top: 20px;
+  text-align: center;
+  margin: 25px;
+  font-size: 25px;
+}
+
+.rowInfo {
+  text-align: center;
+}
+
+.divTitle {
+  font-weight: bold;
+}
+
+#divLegend {
+  text-align: center;
+  padding-top: 5%;
+  margin-bottom: 1em;
+}
+
+#modalOptions .title {
+  clear: both;
+  font-weight: bold;
+  font-size: 120%;
+}
+
+#modalOptions .option.half {
+  float: left;
+  height: 50px;
+  width: 200px;
+}
+
+#modalOptions .option.half.check {
+  margin-top: 12px;
+  margin-bottom: -12px;
+}
+
+#modalOptions .option.full {
+  clear: both;
+}
+
+#modalOptions .textinput {
+  height: 20px;
+  width: 50px;
+  margin-top: 7px;
+}
+
+#modalOptions .btn{
+  height: 15px;
+  width: 15px;
+  padding: 0px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border: 0px;
+  background-color: cadetblue;
+}
+
+#modalOptions .btn.active {
+  background-color: darkseagreen;
+}

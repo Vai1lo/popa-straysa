@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sкорочтение</title>
+    <link rel="shortcut icon" type="image/png" href="img/image2.png">
+    <link href="css/dark-style.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <div class="container" id="content">
+      <div class="row">
+        <div class="span1 dbg1"></div>
+        <div class="span1 dbg2"></div>
+        <div class="span8">
+          <div id="divCanvas">Ошибка
+          </div>
+        </div>
+      </div>
+      <div class="row rowInfo">
+        <div class="span5"></div>
+        <div class="span1">
+          <div class="divTitle">СВМ</div>
+          <div id="divWPM"></div>
+        </div>
+        <div class="span1">
+          <div class="divTitle">Размер</div>
+          <div id="divChunk"></div>
+        </div>
+      </div>
+      <div class="row rowLegend">
+        <div class="span2"></div>
+        <div class="span8" id="divLegend">
+        </div>
+      </div>
+    </div>
+
+    <div id="modalInput" class="modal hide fade" tabindex=-1 role="dialog" aria-labelledby="mdlInputHeader" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+        <h3 id="mdlInputHeader">Вставьте текст сюда</h3>
+        <div>
+          <span>или загрузить файл здесь: </span>
+          <input type="file" id="mdlFileUpload">
+        </div>
+      </div>
+      <div class="modal-body">
+        <textarea class="input-xlarge" id="txtaInput" rows="15"></textarea>
+        <div id="modalInputWC"></div>
+      </div>
+      <div class="modal-footer" style="text-align: center">
+        <div id="modalInputLegend"></div>
+      </div>
+    </div>
+
+    <div id="modalOptions" class="modal hide fade" tabindex=-1 role="dialog" aria-labelledby="mdlOptionsHeader" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+        <h3 id="mdlOptionsHeader">Настройки</h3>
+      </div>
+      <div class="modal-body">
+        <div class="block">
+          <div class="title">Скорость</div>
+          <div class="option half">
+            <abbr title="Слов в минуту">СВМ</abbr>:
+            <input type="text" class="textinput" id="optionsWPM" />
+          </div>
+          <div class="option half">
+            <abbr title="Величина изменения скорости СВМ, когда нажимаете на J/F">Разница</abbr>:
+            <input type="text" class="textinput" id="optionsDelta" />
+          </div>
+        </div>
+        <div class="block">
+          <div class="title">Куски</div>
+          <div class="option half">
+            <abbr title="Слов в кусках">Размер</abbr>:
+            <input type="text" class="textinput" id="optionsChunkSize" />
+          </div>
+          <div class="option half">
+            <abbr title="Максимальное количество символов в куске. 0 означает отсутствие ограничений.">Длина</abbr>:
+            <input type="text" class="textinput" id="optionsChunkLen" />
+          </div>
+        </div>
+        <div class="block">
+          <div class="title">Пропустить назад</div>
+          <div class="option half check">
+            <div class="btn" id="option-enableskipback" data-toggle="buttons-checkbox"></div>
+            <abbr title="Если включено, вы можете пропустить слова назад, нажав A">Включается на: <strong class="label">A</strong></abbr>
+          </div>
+          <div class="option half">
+            <abbr title="Количество слов, которые нужно пропускать за раз">Слов для пропуска</abbr>:
+            <input type="text" class="textinput" id="optionsSkipBackWords">
+          </div>
+        </div>
+        <div class="block">
+          <div class="title">Дополнительно</div>
+          <div class="option full">
+            <div class="btn" id="option-hidenoise" data-toggle="buttons-checkbox"></div>
+            Скрывать лишнее во время чтения
+          </div>
+          <div class="option full">
+            <div class="btn" id="option-localstorage" data-toggle="buttons-checkbox"></div>
+            Сохранить текст и настройки в локальном хранилище
+          </div>
+          <div class="option full">
+            <div class="btn" id="option-darkmode" data-toggle="buttons-checkbox"></div>
+            Темная тема
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer" style="text-align: center">
+        <div id="modalOptionsLegend"></div>
+      </div>
+    </div>
+
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.timer.js"></script>
+    <script src="js/SpeederEngine.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
